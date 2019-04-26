@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="393.0" prefWidth="398.0" styleClass="AnchorPane" stylesheets="@../css/HClinica.css" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HClinicaController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="371.0" stylesheets="@../css/HClinica.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="btn_cerrar" mnemonicParsing="false" onAction="#CerrarApp" text="Cerrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Declarar">
+            <items>
+              <MenuItem fx:id="item_diag" mnemonicParsing="false" onAction="#Mostrar_Diag" text="Diágnostico" />
+                  <MenuItem fx:id="item_def" mnemonicParsing="false" onAction="#Mostrar_Def" text="Tipo de Deficiencia" />
+                  <MenuItem fx:id="item_paciente" mnemonicParsing="false" onAction="#Mostrar_Paciente" text="Paciente" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Registro">
+            <items>
+              <MenuItem fx:id="item_tratamiento" mnemonicParsing="false" onAction="#Mostrar_Tratamiento" text="Nuevo Tratamiento" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Acerca de" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

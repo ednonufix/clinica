@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="persistencia.TPaciente" table="tb_paciente">
+        
+        <id name="id_paciente" type="long">
+            <generator class="native"/>
+        </id>
+            
+        <property name="nombre" type="string" not-null="true"/>
+        <property name="apellidos" type="string" not-null="true"/>
+        <property name="edad" type="integer" not-null="true"/>
+        <property name="ci" not-null="true" unique="true"/>
+        <property name="sexo" type="character" not-null="true"/>
+        <property name="fecha_ingreso" not-null="true"/>
+           
+    </class>
+</hibernate-mapping>

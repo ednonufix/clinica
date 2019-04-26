@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="314.0" prefWidth="342.0" styleClass="Diagnostico" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DiagnosticoController">
+    <stylesheets>
+        <URL value="@/css/HClinica.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="26.0" layoutY="98.0">
+         <content>
+            <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                  <TableColumn fx:id="tb_no" editable="false" maxWidth="80.0" minWidth="20.0" prefWidth="40.0" text="No" />
+                <TableColumn fx:id="tb_diag" editable="false" maxWidth="200.0" prefWidth="160.0" text="Diagnósticos" />                
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="menu_borrar" mnemonicParsing="false" onAction="#Borrar_Diag" text="Borrar" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="btn_agregar" layoutX="103.0" layoutY="60.0" mnemonicParsing="false" onAction="#Guardar_Diag" text="Agregar" />
+      <Label layoutX="14.0" layoutY="22.0" text="Diagnóstico" />
+      <TextField fx:id="nombre" layoutX="103.0" layoutY="17.0" />
+      <Button fx:id="btn_cerrar" layoutX="242.0" layoutY="157.0" mnemonicParsing="false" onAction="#Cerrar_Diag" text="Cancelar" />
+   </children>
+</AnchorPane>
